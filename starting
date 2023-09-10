@@ -1,0 +1,2143 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<dos.h>
+struct song
+{
+	int choice,lan,sig,ne,ki,ar,so;
+	int n,la,ys,ru,ms,nin,ku,un,ak;
+	int sa,abhi,ari,kk,sg,kh,mc,ng;
+}s;
+struct data{
+	char name[100],email[100],shemail[100],contact[10];
+	char password[10],shpassword[10],acno,shacno;
+	char newpassword[10],fmail[100];
+}d[1000];
+int main()
+{
+	int i,cho,m,l,num,q,pass,ver,newle;
+	int f;
+	char shemail[100];
+	int count=0,o,j,result,temp,flag,z,mood,happy,sad,devotional;
+	int seca,secpass;
+	while(1)
+	{
+		start:
+	    printf("\033[0;32m");
+	    printf("\n \t\t\t\t\t----------------------------------------------------");
+	    printf("\n \t\t\t\t\t  ********** HARMONEY HEAVEN **********"); 
+	    printf("\n \t\t\t\t\t----------------------------------------------------");
+	    printf("\n");
+	    printf("\033[3;36m");
+	    printf("\t\t\t\t\t\t");
+		char opo[1000]=("\n\t Select Any One Of The Following Option To Perform The Operation :\n");
+		for(j=0;j<strlen(opo);j++)
+		{
+			printf("%c",opo[j]);
+			usleep(1111);
+		}
+		char opt[1000]=("\n\t 1.Account creation \n\t 2.Login \n\t 3.Total no of accounts \n\t 4.Password updation \n\t choose your option:");
+		for(j=0;j<strlen(opt);j++)
+		{
+			printf("%c",opt[j]);
+			usleep(1111);
+		}
+		scanf("%d",&o);
+		switch(o)
+		{
+			case 1:{
+				count++;
+				system("cls");
+				char acc[1000]=("\n\t You have Selected Option 1.Account Creation");
+				for(j=0;j<strlen(acc);j++)
+				{
+					printf("%c",acc[j]);
+					usleep(1111);
+				}
+				printf("\n\t Enter your Name :");
+				scanf("%s",d[i].name);
+				printf("\n\t Enter your Email address :");
+				scanf("%s",d[i].email);
+				num:
+				printf("\n\t Enter your Contact Number (10 digits only):");
+				scanf("%s",d[i].contact);
+				l=strlen(d[i].contact);
+				if(l!=10)
+				{
+					printf("\n\t Enter a valid number");
+					goto num;
+				}
+				pass:
+				printf("\n\t Create Your Password (8 digiits only,including special cases) :");
+				scanf("%s",&d[i].password);
+				q=strlen(d[i].password);
+				if(q!=8)
+				{
+					printf("Enter a valid password");
+					goto pass;
+				}
+				printf("\n\t Enter the Account Number :");
+				scanf("%d",&d[i].acno);
+				system("cls");
+				break;
+			}
+		 case 2:{
+			system("cls");
+			printf("\n\t You have selected option 2.Login");
+			printf("\n\t Enter your Email address :");
+			scanf("%s",&shemail);
+			for(i=0;i<=count;i++)
+			{
+				m=strcmp(d[i].email,shemail);
+				if(m==0)
+				{
+					temp=1;
+					repass:
+					printf("\n\t Enter your password :");
+					scanf("%s",d[i].shpassword);
+					ver=strcmp(d[i].shpassword,d[i].shpassword);
+					if(ver==0)
+					{
+						temp=1;
+						strupr(d[i].name);
+						printf("\n\t Welcome : %s",d[i].name);
+						sf:
+						printf("\n");
+						char nu[1000]=("\n\t Select your current mood From The Following Options :");
+						for(j=0;j<strlen(nu);j++)
+						{
+							printf("%c",nu[j]);
+							usleep(1111);
+						}					 	  
+						
+						char start[1000]=("\n\tWhich type of songs you want to listen:\n\t1.Feel good songs:\n\t2.Romantic songs:");
+						for(j=0;j<strlen(start);j++)
+						{
+							printf("%c",start[j]);
+							usleep(1111);
+						}
+						printf("\n\tEnter your mood:");
+						scanf("%d",&s.choice);
+						system("cls");
+						switch(s.choice)
+						{
+							case 1:
+							printf("\n");
+							char lang[1000]=("please select your language:\n1.HINDI:\n2.TELUGU:\nselect your choose:");
+							for(j=0;j<strlen(lang);j++)
+								{
+									printf("%c",lang[j]);
+									usleep(11111);
+								}
+								scanf("%d",&s.lan);
+								switch(s.lan)
+									{
+									case 1:
+									{
+										system("cls");
+										char gen[2000]={"please select the gen of songs u want to lisen:\n1.OLD generation songs:\n2.90's songs:\n3.New generation songs:\n select your option:"};
+										for(j=0;j<strlen(gen);j++)
+										{
+											printf("%C",gen[j]);
+											usleep(1111);
+										}
+										scanf("%d",&s.ne);
+										switch(s.ne)
+										{
+											case 1:
+											
+											{
+													
+												system("cls");
+												char sing[2000]={"please select the singer whose songs you want to lisen:\n1.KISHORE KUMAR:\n2.LATA MANGASWER:\n3.Asha Bhosle:\n4.R.D.Burman:\n5.Mukesh:"};
+												for(j=0;j<strlen(sing);j++)
+												{
+													printf("%c",sing[j]);
+													usleep(1111);
+												}
+												scanf("%d",&s.sig);
+												switch(s.sig)
+												{
+													case 1:
+													{
+														system("cls");
+														df:
+														printf("\n");	
+														char sig[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(sig);j++)
+														{
+																printf("%c",sig[j]);
+																usleep(1111);
+														}
+														printf("\n1.pal pal dil ke pass:\n2.Dil kya kare:\n3.Roop Tera Mastana:\n4.Mera Sapno ki Rani:\n5.Yeh Shaam Mastani:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.ki);
+														switch(s.ki)
+														{
+															case 1:
+															{
+																system("start chrome https://www.youtube.com/watch?v=AMuRRXCuy-4");
+																system("cls");
+																goto df;
+																break;
+															}
+															case 2:
+															{
+																system("start chrome https://www.youtube.com/watch?v=kEUXdnyXXO0");
+																system("cls");
+																	goto df;
+																break;	
+															}
+															case 3:
+															{
+																system("start chrome https://www.youtube.com/watch?v=dyEdcOhxJNQ");
+																system("cls");
+																	goto df;
+																break;
+															}
+															case 4:
+															{
+																system("start chrome https://www.youtube.com/watch?v=UOQ6xDLT-sc");
+																system("cls");
+																	goto df;
+																break;
+															}
+															case 5:
+															{
+																system("start chrome https://www.youtube.com/watch?v=UOQ6xDLT-sc");
+																system("cls");
+																	goto df;
+																break;
+															}
+															case 6:
+															{
+																
+																system("cls");
+																
+																system("start chrome https://www.jiosaavn.com/artist/kishore-kumar-songs/yMoPyl3ZzyY_");
+																	goto df;
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.one more song:\n2.Exit");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																	
+																
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto df;
+																break;
+															}
+																
+														}
+														break;
+													}
+													case 2:
+													{
+														system("cls");
+														lat:
+														printf("\n");
+														char lat[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(lat);j++)
+														{
+															printf("%c",lat[j]);
+															usleep(1111);
+														}
+														printf("\n1.O mere dil ke chain:\n2.Too ne o rangeele:\n3.Chalte Chalte:\n4.Sun re pawan:\n5.Chori Chori Koi:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.la);
+														switch(s.la)
+														{
+															case 1:
+															{
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=bIAI2NsDghQ");
+																	goto lat;
+																break;	
+															}
+															case 2:
+															{
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=Q57m7UZnjTI");
+																goto lat;
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=fH73z7rVDqs");
+																goto lat;
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+															
+																system("start chrome https://www.youtube.com/watch?v=ASrXqj1RIJM");
+																goto lat;
+																break;
+															}
+															case 5:
+															{
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=79hxOboDXlE");
+																goto lat;
+																break;
+															}
+															case 6:
+															{
+																
+																system("cls");
+																
+																system("start chrome https://www.jiosaavn.com/artist/lata-mangeshkar-songs/FCtl69DObYg_");
+																	goto lat;
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.one more song:\n2.Exit");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																	
+																
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto lat;
+																break;
+															}
+															
+														}
+														break;
+													}
+													case 3:
+													{
+													   system("cls");
+													   yd:
+													   	printf("\n");
+													   char ra[5000]={"select the song you want to lisen:"};
+													   	for(j=0;j<strlen(ra);j++)
+													   	{
+													   	  printf("%c",ra[j]);
+														  usleep(1111);	
+														}
+														printf("\n1.Kehdoon Tumhen:\n2.Jaane Ja Dhoondta Phir Raha:\n3.Pyar Hamara Amar Rahega:\n4.Chehra Kya Dekhte Ho:\n5.Bachke Rehna Re Baba:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.ys);
+														switch(s.ys)
+														{
+															case 1:
+															{
+																
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=LFk-bh0NAAI");
+																goto yd;
+																break;
+															}
+															case 2:
+															{
+																
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=MKnlkHt5LC4");
+																	goto yd;
+																break;
+															}
+															case 3:
+															{
+																
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=q5r68YYyuW8");
+																	goto yd;
+																break;
+															}
+															case 4:
+															{
+																
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=c8Cycbt_0XY");
+																	goto yd;
+																break;
+															}
+															case 5:
+															{
+																
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=9HVe5O3NX0U");
+																	goto yd;
+																break;
+															}
+															case 6:
+															{
+																
+																system("cls");
+																
+																system("start chrome https://www.jiosaavn.com/artist/asha-bhosle-songs/aejlQXLa1TI_");
+																	goto yd;
+																break;
+															}
+															case 7:
+															{
+																
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																	
+																
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto yd;
+																break;
+															}
+														}
+														break;
+													}
+													case 4:
+													
+													{
+														
+													   system("cls");
+													   rb:
+													   	printf("\n");
+													   char rd[5000]={"select the song you want to lisen:"};
+													   	for(j=0;j<strlen(rd);j++)
+													   	{
+													   	  printf("%c",rd[j]);
+														  usleep(1111);	
+														}
+														printf("\n1.Do Ghoont Mujhe Bhi:\n2.O Mere Dil Ke Chain:\n3.Bheegi Bheegi Raaton Mein:\n4.Mehbooba:\n5.Jana O Meri Jana:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.ru);
+														switch(s.ru)
+														{
+														   case 1:
+														   {
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=z83LpMHN7z4");
+																	goto rb;
+														   		break;
+															}
+															case 2:
+															{
+																system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=FFbc-jXkADs");
+																	goto rb;
+															    break;	
+															}
+															case 3:
+															{
+																	system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=-mKSeBJ_okY");
+																	goto rb;
+																break;
+															}
+															case 4:
+															{
+																	system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=1dD8iP-vq0k");
+																	goto rb;
+																break;
+															}
+															case 5:
+															{
+																	system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=XFA0NnB0UXU");
+																	goto rb;
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																
+																system("start chrome https://www.jiosaavn.com/artist/r.d.-burman-songs/EESmE9Noe9M_");
+																	goto rb;
+																break;
+															}
+															case 7:
+															{
+																
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																	
+																
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto rb;
+																break;
+															}
+															
+														}
+														break;
+													}
+													case 5:
+													{
+													    
+													   system("cls");
+													   mk:
+													   	printf("\n");
+													   char mu[5000]={"select the song you want to lisen:"};
+													   	for(j=0;j<strlen(mu);j++)
+													   	{
+													   	  printf("%c",mu[j]);
+														  usleep(1111);	
+														}
+														printf("\n1.Kabhi Kabhi Mere:\n2.Jeena Yahan Marna Yahan:\n3.Main Aashiq Hoon Baharon Ka:\n4.Tauba Yeh Matwali Chaal:\n5.O Mehbooba:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.ms);
+														switch(s.ms)
+														{
+														   case 1:
+														   {
+														   		system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=BB6KvXQx090");
+																	goto mk;
+																break;
+														   }
+														   case 2:
+														   {
+														   		system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=JNyjRLyAEso");
+																	goto mk;
+																break;
+														   }
+														   case 3:
+														   {
+														   		system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=-1BgL-7Vh1A");
+																	goto mk;
+																break;
+														   }
+														   case 4:
+														   {
+														   		system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=0VD0W8KUzC8");
+																	goto mk;
+																break;
+														   }
+														   case 5:
+														   {
+														   		system("cls");
+																
+																system("start chrome https://www.youtube.com/watch?v=mYyJHAj8Hl0");
+																	goto mk;
+																break;
+														   }
+														   case 6:
+														   	{
+														   		system("cls");
+																
+																system("start chrome https://www.jiosaavn.com/artist/mukesh-songs/CuOu7Z1sy8U_");
+																	goto mk;
+														   		break;	
+															}
+															case 7:
+															{	
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																	
+																
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto mk;
+																break;
+															}
+														   	
+														}	
+														break;
+													}
+												
+													
+														
+												}
+												break;
+							
+											}
+											case 2:
+											{
+												system("cls");
+												printf("\n");
+												char ni[2000]={"please select the singer whose songs you want to lisen:"};
+												for(j=0;j<strlen(ni);j++)
+												{
+													printf("%c",ni[j]);
+													usleep(1111);
+												}
+												printf("\n1.KUMAR SANU:\n2.UDIT NARAYAN:\n3.ALKA YAGNIK:\n4.SONU NIGAM:\n5.ABHIJEET:");
+												scanf("%d",&s.nin);
+												switch(s.nin)
+												{
+													case 1:
+													{
+														system("cls");
+														nt:
+														printf("\n");	
+														char ku[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(ku);j++)
+														{
+																printf("%c",ku[j]);
+																usleep(1111);
+														}
+														printf("\n1.Tujhe Dekha To:\n2.Chura Ke Dil Mera:\n3.O Meri Jaana:\n4.Tera mera pyar :\n5. Ek Ladki Ko Dekha:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.ku);
+														switch(s.ku)
+														{
+															case 1:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=cNV5hLSa9H8");
+																goto nt;
+																break;
+															}
+															case 2:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=Yqj1_V90KJo");
+																goto nt;
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=wBw9EPtDLw8");
+																goto nt;
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=ufJ4xXKLq5Q");
+																goto nt;
+																break;
+															}
+															case 5:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=fTauOK8J-U8");
+																goto nt;
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																system("start chrome https://www.jiosaavn.com/artist/kumar-sanu-songs/fe0z9ZAFgGE_");
+																goto nt;
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto nt;
+																break;
+															}
+														}		
+														
+													
+														break;
+													}
+													case 2:
+													{
+														system("cls");
+														ui:
+														printf("\n");	
+														char ud[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(ud);j++)
+														{
+																printf("%c",ud[j]);
+																usleep(1111);
+														}
+														printf("\n1.Main Khiladi:\n2.Dil To Pagal Hai:\n3.Pehla Nasha:\n4.Aye Mere Humsafar:\n5.Tere Naam:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.un);
+														switch(s.un)
+														{
+															case 1:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=CS1JS7wNi_Q");
+																goto ui;	
+																break;
+															}
+															case 2:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=lZ2PhyBF3GQ");
+																goto ui;
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=SBfPs-PMGTA");
+																goto ui;
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=sWqjZpBtcxc");
+																goto ui;
+																break;
+															}
+															case 5:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=OMoU0Pfibc4");
+																goto ui;
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																system("start chrome https://www.jiosaavn.com/artist/udit-narayan-songs/kLtmb7Vh8Rs_");
+																goto ui;
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto ui;
+																break;
+															}
+														}
+														break;
+													}
+													case 3:
+													{
+														system("cls");
+														al:
+														printf("\n");	
+														char ay[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(ay);j++)
+														{
+															printf("%c",ay[j]);
+															usleep(1111);
+														}
+														printf("\n1.Baazigar O Baazigar:\n2.Neend Churayee Meri:\n3.Paas Woh Aane Lage:\n4.Ek Din Aap:\n5.Mera Dil Bhi Kitna Pagal Hai:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.ak);
+														switch(s.ak)
+														{
+															case 1:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=PUO7_Gi6ipg");
+																goto al;
+																break;
+															}
+															case 2:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=19w7JGYCtxo");
+																goto al;
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=plB0ytzIlqI");
+																goto al;
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=90Q5bMN6u2w");
+																goto al;
+																break;
+															}
+															case 5:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=0Z7C8LkRRVA");
+																goto al;
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																system("start chrome https://www.jiosaavn.com/artist/alka-yagnik-songs/uqRkqsl4ZnQ_");
+																goto al;
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto al;
+																break;
+															}
+															
+														}
+														break;
+													}
+													case 4:
+													{
+														system("cls");
+														si:
+														printf("\n");	
+														char sn[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(sn);j++)
+														{
+															printf("%c",sn[j]);
+															usleep(1111);
+														}
+														printf("\n1.Kal Ho Naa Ho:\n2.Saathiya:\n3.Hamen Jab Se Mohabbat:\n4.Sandese Aate Hai-Ke Ghar Kab Aaoge:\n5.Yeh Dil Deewana:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.sa);
+														switch(s.sa)
+														{
+															case 1:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=g0eO74UmRBs");
+																goto si;	
+																break;
+															}
+															case 2:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=eMA6GHTQ4WA");
+																goto si;
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=jor_SaUzuVI");
+																goto si;
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=L6ULJ4FqWSY");
+																goto si;
+																break;
+															}
+															case 5:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=T4wr-y_bqB8");
+																goto si;
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																system("start chrome https://www.jiosaavn.com/artist/sonu-nigam-songs/,kuQK6K6u0I_");
+																goto si;
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto si;
+																break;
+															}
+														}
+														break;
+													}
+													case 5:
+													{
+														system("cls");
+														ah:
+														printf("\n");	
+														char ahi[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(ahi);j++)
+														{
+															printf("%c",ahi[j]);
+															usleep(1111);
+														}
+														printf("\n1.Main Koi Aisa Geet Gaoon:\n2.Tauba Tumhare Ishare:\n3.tum dil ki dhadkan mein:\n4.Kabhi Yaadon Mein Aaun:\n5.Chaand Taare:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.abhi);
+														switch(s.abhi)
+														{
+															case 1:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=vzlXfZlH5dk");
+																goto ah;
+																break;
+															}
+															case 2:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=hVa2ldy1LrE");
+																goto ah;
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=3Z_x7vBqr6E");
+																goto ah;
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=BrIkUBI_37I");
+																goto ah;
+																break;
+															}
+															case 5:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=N3QzaUwml5w");
+																goto ah;
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																system("start chrome https://www.jiosaavn.com/artist/abhijeet-songs/W75ouX6ktas_");
+																goto ah;
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto ah;
+																break;
+															}
+																
+														}	
+														break;
+													}
+												}
+												break;
+											}
+											case 3:
+											{
+												system("cls");
+												printf("\n");
+												char nw[2000]={"please select the singer whose songs you want to lisen:"};
+												for(j=0;j<strlen(nw);j++)
+												{
+													printf("%c",nw[j]);
+													usleep(1111);
+												}
+												printf("\n1.ARIJIT SINGH:\n2.MOHIT CHAUHAN:\n3.SHREYA GHOSHAL:\n4.KAILASH KHER:\n5.KRISHNAKUMAR KUNNAT(KK):");
+												scanf("%d",&s.ng);
+												switch(s.ng)
+												{
+													case 1:
+													{
+														system("cls");
+														as:
+														printf("\n");	
+														char ag[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(ag);j++)
+														{
+															printf("%c",ag[j]);
+															usleep(1111);
+														}
+														printf("\n1.Hawayein:\n2.Apna Bana Le:\n3.Rahogi Meri:\n4.Sooraj Dooba Hai Yaaro:\n5.Mere Yaaraa:\n6.Tere Hawale:\n7.for more songs:\n8.other options:\nSelect the song:");
+														scanf("%d",&s.ari);
+														switch(s.ari)
+														{
+															case 1:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=cYOB941gyXI");
+																goto as;
+																break;
+															}
+															case 2:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=ElZfdU54Cp8");
+																goto as;
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=tGs7iLem1cE");
+																goto as;
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=nJZcbidTutE");
+																goto as;
+																break;
+															} 
+															case 5:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=iTAj46KJZtM");
+																goto as;
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=-vzZ50Rijm8");
+																goto as;	
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																system("start chrome https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_");
+																goto as;
+																break;
+															}
+															case 8:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto as;
+																break;
+															}
+														}
+														break;
+													}
+													case 2:
+													{
+														system("cls");
+														mo:
+														printf("\n");	
+														char mh[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(mh);j++)
+														{
+															printf("%c",mh[j]);
+															usleep(1111);
+														}
+														printf("\n1.Bheegi Si Bhaagi Si:\n2.Masakali:\n3.Matargashti:\n4.Rang Lageya:\n5.Saans:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.mc);
+														switch(s.mc)
+														{
+															case 1:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=yHWPO9DDnsk");
+																goto mo;
+																break;
+															}
+															case 2:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=SS3lIQdKP-A");
+																goto mo;
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=6vKucgAeF_Q");
+																goto mo;
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=Qg-jcTYM5DQ");
+																goto mo;
+																break;
+															}
+															case 5:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=VAt6TO2gdko");
+																goto mo;
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																system("start chrome https://www.jiosaavn.com/artist/mohit-chauhan-songs/YNIh2poJKsY_");
+																goto mo;
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto mo;
+																break;
+															}
+														}
+														break;
+													}
+													case 3:
+													{
+														system("cls");
+														se:
+														printf("\n");	
+														char sho[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(sho);j++)
+														{
+															printf("%c",sho[j]);
+															usleep(1111);
+														}
+														printf("\n1.Manwa Laage:\n2.Agar Tum Mil Jao:\n3.Saibo:\n4.Nannare:\n5.Deewani Mastani:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.sg);
+														switch(s.sig)
+														{
+															case 1:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=d8IT-16kA8M");
+																goto se;
+																break;
+															}
+															case 2:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=8vbeVLBW8Fk");
+																goto se;
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=GtNrQy90Ih4");
+																goto se;
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=ZCkM1wDc880");
+																goto se;
+																break;
+															}
+															case 5:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=h6lHUn20J5g");
+																goto se;
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																system("start chrome https://www.jiosaavn.com/artist/shreya-ghoshal-songs/lIHlwHaxTZ0_");
+																goto se;
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}	
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto se;
+																break;
+															}
+														}
+														break;
+													}
+													case 4:
+													{
+														system("cls");
+														kha:
+														printf("\n");	
+														char khi[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(khi);j++)
+														{
+															printf("%c",khi[j]);
+															usleep(1111);
+														}
+														printf("\n1.eri Deewani:\n2.Yun Hi Chala Chal:\n3.Chand Sifarish:\n4.Arziyan:\n5.Saiyyan:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.kh);
+														switch(s.kh)
+														{
+															case 1:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=zZasH6qkn8M");
+																goto kha;	
+																break;
+															}
+															case 2:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=eEeX2QMlSlo");
+																goto kha;	
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=zWEOx7TSM6I");
+																goto kha;	
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=dXdD1_AGBZg");
+																goto kha;	
+																break;
+															}
+															case 5:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=TuUVVKVdZm4");
+																goto kha;	
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																system("start chrome https://www.jiosaavn.com/artist/kailash-kher-songs/vidifVDY4c4_");
+																goto kha;	
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto kha;
+																break;
+															}
+														}
+														break;
+													}
+													case 5:
+													{
+														system("cls");
+														kr:
+														printf("\n");	
+														char kr[5000]={"select the song you want to lisen:"};
+														for(j=0;j<strlen(kr);j++)
+														{
+															printf("%c",kr[j]);
+															usleep(1111);
+														}
+														printf("\n1.Yaaron:\n2.Aankhon Mein Teri:\n3.Kya Mujhe Pyar Hai:\n4.Tu ashiqui hai:\n5.Zara Sa:\n6.for more songs:\n7.other options:\nSelect the song:");
+														scanf("%d",&s.kk);
+														switch(s.kk)
+														{
+															case 1:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=LCfvYo3ILG0");
+																goto kr;
+																break;
+															}
+															case 2:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=2drIKUOCZxU");
+																goto kr;
+																break;
+															}
+															case 3:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=lrAM_H7v8wM");
+																goto kr;
+																break;
+															}
+															case 4:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=aw0s2KaoA2Q");
+																goto kr;
+																break;
+															}
+															case 5:
+															{
+																system("cls");
+																system("start chrome https://www.youtube.com/watch?v=5IY4BNj0-10");
+																goto kr;
+																break;
+															}
+															case 6:
+															{
+																system("cls");
+																system("start chrome https://www.jiosaavn.com/artist/kk-songs/K,5uNVM,qpM_");
+																goto kr;
+																break;
+															}
+															case 7:
+															{
+																system("cls");
+																printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+																scanf("%d",&cho);
+																if(cho==1)
+																{
+																	system("cls");
+																	goto sf;
+																}
+																else
+																{
+																	system("cls");
+																	break;
+																}
+																break;
+															}
+															default:
+															{
+																printf("\n you have selected wrong option:\nplease select correct one:");
+																system("cls");
+																goto kr;
+																break;
+															}
+														}
+														break;
+													}
+														
+												}
+												break;
+											}
+										break;
+									}
+	        					break;
+							}
+						
+							break;
+						}
+						case 2:
+						{
+							system("cls");
+							int te;
+							tu:
+							printf("\n");	
+							char eg[5000]={"select the song you want to lisen:"};
+							for(j=0;j<strlen(eg);j++)
+							{
+								printf("%c",eg[j]);
+								usleep(1111);
+							}
+							printf("\n1.Manasaa:\n2.Nuvvunte Naa Jathagaa:\n3.Chinni Chinni Aasalu:\n4.Endhuko Emo:\n5.Nee Jathaga:\n6.for more songs:\n7.other options:\nSelect the song:");
+							scanf("%d",&te);
+							switch(te)
+							{
+								case 1:
+								{
+									system("cls");
+									system("start chrome https://www.youtube.com/watch?v=zV6d16yukFY");
+									goto tu;	
+									break;
+								}
+								case 2:
+								{
+									system("cls");
+									system("start chrome https://www.youtube.com/watch?v=Zc7SeDL-0uE");
+									goto tu;	
+									break;
+								}
+								case 3:
+								{
+									system("cls");
+									system("start chrome https://www.youtube.com/watch?v=sStyIIjGhzI");
+									goto tu;	
+									break;
+								}
+								case 4:
+								{
+									system("cls");
+									system("start chrome https://www.youtube.com/watch?v=IXJvlLm5jaM");
+									goto tu;	
+									break;
+								}
+								case 5:
+								{
+									system("cls");
+									system("start chrome https://www.youtube.com/watch?v=bc157RVRwzU");
+									goto tu;	
+									break;
+								}
+								case 6:
+								{
+									system("cls");
+									system("start chrome https://www.jiosaavn.com/featured/telugu%3a_india_superhits_top_50/4O6DwO-qteN613W6L-cCSw__");
+									goto tu;	
+									break;
+								}
+								case 7:
+								{
+									system("cls");
+									printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+									scanf("%d",&cho);
+									if(cho==1)
+									{
+										system("cls");
+										goto sf;
+									}
+									else
+									{
+										system("cls");
+										break;
+									}
+									break;
+								}
+								default:
+								{
+									system("cls");
+									printf("\n you have selected wrong option:\nplease select correct one:");
+												
+									goto kr;
+									break;
+								}
+								
+							}
+							break;
+						}
+						
+					}
+				}
+				if(s.choice==2)
+				{
+					system("cls");
+					printf("\n");
+					int rc;
+					char ro[2000]={"please select the singer whose songs you want to lisen:"};
+					for(j=0;j<strlen(ro);j++)
+					{
+						printf("%c",ro[j]);
+						usleep(1111);
+					}
+					printf("\n1.ARIJIT SINGH:\n2.MOHIT CHAUHAN:\n3.SHREYA GHOSHAL:\n4.Armaan Mailk:\n5.KRISHNAKUMAR KUNNAT(KK):");
+					scanf("%d",&rc);
+					switch(rc)
+					{
+						case 1:
+						{
+							system("cls");
+							du:
+							printf("\n");	
+						    char dg[5000]={"select the song you want to lisen:"};
+							for(j=0;j<strlen(dg);j++)
+							{
+								printf("%c",dg[j]);
+								usleep(1111);
+							}
+							printf("\n1.Soch Na Sake:\n2.Ve Maahi:\n3.Tum Hi Ho:\n4.Hamdard:\n5.Mast Magan:\n6.Tujhe Kitna Chahne Lage:\n7.for more songs:\n8.other options:\nSelect the song:");
+							int sgh;
+							scanf("%d",&sgh);
+							switch(sgh)
+							{
+								case 1:
+								{
+									system("cls");
+									system("start chrome https://www.youtube.com/watch?v=MRtRcTfszjY");
+									goto du;
+									break;
+								}
+								case 2:
+								{
+								    system("cls");
+									system("start chrome https://www.youtube.com/watch?v=j6muwUGdvXw");
+									goto du;
+									break;
+								}
+								case 3:
+								{
+									system("cls");
+									system("start chrome https://www.youtube.com/watch?v=IJq0yyWug1k");
+									goto du;
+									break;
+								}
+								case 4:
+								{
+									system("cls");
+									system("start chrome https://www.youtube.com/watch?v=FJ55SHCzt88");
+									goto du;
+									break;
+								} 
+								case 5:
+								{
+									system("cls");
+									system("start chrome https://www.youtube.com/watch?v=xitd9mEZIHk");
+									goto du;
+									break;
+								}
+								case 6:
+								{
+									system("cls");
+									system("start chrome https://www.youtube.com/watch?v=2IGDsD-dLF8");
+									goto du;	
+									break;
+								}
+								case 7:
+								{
+									system("cls");
+									system("start chrome https://www.jiosaavn.com/artist/arijit-singh-songs/LlRWpHzy3Hk_");
+									goto du;
+									break;
+								}
+								case 8:
+								{
+									system("cls");
+									printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+									scanf("%d",&cho);
+									if(cho==1)
+									{
+									    system("cls");
+										goto sf;
+									}
+									else
+									{
+									system("cls");
+									break;
+									}
+								break;
+								}
+								default:
+								{
+									printf("\n you have selected wrong option:\nplease select correct one:");
+									system("cls");
+									goto du;
+									break;
+								}
+							}
+						break;
+					}
+					case 2:
+					{
+						system("cls");
+						mu:
+						printf("\n");	
+						char mi[5000]={"select the song you want to lisen:"};
+						for(j=0;j<strlen(mi);j++)
+						{
+							printf("%c",mi[j]);
+							usleep(1111);
+						}
+						printf("\n1.Tum Se Hi:\n2.Tum Ho:\n3.Khwabon Ke Parindey:\n4.Pee Loon:\n5.Yeah Dooriyaan:\n6.for more songs:\n7.other options:\nSelect the song:");
+						int my;
+						scanf("%d",&my);
+						switch(my)
+						{
+							case 1:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=mt9xg0mmt28");
+								goto mu;
+								break;
+							}
+							case 2:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=gkCKTuR-ECI");
+								goto mu;
+								break;
+							}
+							case 3:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=R0XjwtP_iTY");
+								goto mu;
+								break;
+							}
+							case 4:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=D8XFTglfSMg");
+								goto mu;
+								break;
+							}
+							case 5:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=7z3YeFqd7xQ");
+								goto mu;
+								break;
+							}
+							case 6:
+							{
+								system("cls");
+								system("start chrome https://www.jiosaavn.com/artist/mohit-chauhan-songs/YNIh2poJKsY_");
+								goto mu;
+								break;
+							}
+							case 7:
+							{
+								system("cls");
+								printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+								scanf("%d",&cho);
+								if(cho==1)
+								{
+									system("cls");
+									goto sf;
+								}
+								else
+								{
+									system("cls");
+									break;
+								}
+								break;
+							}
+							default:
+							{
+								printf("\n you have selected wrong option:\nplease select correct one:");
+								system("cls");
+								goto mu;
+								break;
+							}
+						}
+					    break;
+					}
+					case 3:
+					{
+						system("cls");
+						su:
+						printf("\n");	
+						char sgj[5000]={"select the song you want to lisen:"};
+						for(j=0;j<strlen(sgj);j++)
+						{
+							printf("%c",sgj[j]);
+							usleep(1111);
+						}
+						printf("\n1.Teri Ore:\n2.Barso Re:\n3.Bahara Bahara:\n4.Piya Bole:\n5.Thodi Der:\n6.for more songs:\n7.other options:\nSelect the song:");
+						int sj;
+						scanf("%d",&sj);
+						switch(sj)
+						{
+							case 1:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=CWfCp96-yck");
+								goto su;
+								break;
+							}
+							case 2:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=asw-wTDzGUQ");
+								goto su;
+								break;
+							}
+							case 3:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=7N74i_rAfFE");
+								goto se;
+								break;
+							}
+							case 4:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=ZAkr0KFFLLs");
+								goto su;
+								break;
+							}
+							case 5:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=FGTv9-oQhIg");
+								goto su;
+								break;
+							}
+							case 6:
+							{
+								system("cls");
+								system("start chrome https://www.jiosaavn.com/artist/shreya-ghoshal-songs/lIHlwHaxTZ0_");
+								goto su;
+								break;
+							}
+							case 7:
+							{
+								system("cls");
+								printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+								scanf("%d",&cho);
+								if(cho==1)
+								{
+									system("cls");
+									goto sf;
+								}
+								else
+								{
+									system("cls");
+									break;
+								}	
+								break;
+							}
+							default:
+							{
+								printf("\n you have selected wrong option:\nplease select correct one:");
+								system("cls");
+								goto se;
+								break;
+							}
+						}
+						break;
+					}
+					case 4:
+					{
+						system("cls");
+						khu:
+						printf("\n");	
+						char khj[5000]={"select the song you want to lisen:"};
+						for(j=0;j<strlen(khj);j++)
+						{
+							printf("%c",khj[j]);
+							usleep(1111);
+						}
+						printf("\n1.Main Rahoon Ya Na Rahoon:\n2.Kuch To Hai Jo:\n3.Buddhu Sa Mann:\n4.Jab Tak:\n5. Bol do na zara:\n6.for more songs:\n7.other options:\nSelect the song:");
+						int kn;
+						scanf("%d",&kn);
+						switch(kn)
+						{
+							case 1:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=Dp6lbdoprZ0");
+								goto khu;	
+								break;
+							}
+							case 2:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=SvscrxzfQ0w");
+								goto khu;	
+								break;
+							}
+							case 3:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=i0AUEswUayo");
+								goto khu;	
+								break;
+							}
+							case 4:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=K-Ts-NFR62o");
+								goto khu;	
+								break;
+							}
+							case 5:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=EpEraRui1pc");
+								goto khu;	
+								break;
+							}
+							case 6:
+							{
+								system("cls");
+								system("start chrome https://www.jiosaavn.com/artist/armaan-malik-songs/1iZ7Gi0bi1Y_");
+								goto khu;	
+								break;
+							}
+							case 7:
+							{
+								system("cls");
+								printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+								scanf("%d",&cho);
+								if(cho==1)
+								{
+									system("cls");
+									goto sf;
+								}
+								else
+								{
+									system("cls");
+									break;
+								}
+								break;
+							}
+							default:
+							{
+								printf("\n you have selected wrong option:\nplease select correct one:");
+								system("cls");
+								goto khu;
+								break;
+							}
+						}
+						break;
+					}
+					case 5:
+					{
+						system("cls");
+						kg:
+						printf("\n");	
+						char ke[5000]={"select the song you want to lisen:"};
+						for(j=0;j<strlen(ke);j++)
+						{
+							printf("%c",ke[j]);
+							usleep(1111);
+						}
+						printf("\n1.Khuda Jaane:\n2.Piya Aaye Na:\n3.Tu Jo Mila:\n4.Dil Kyun Yeh Mera:\n5.Tu Hi Meri Shab Hai:\n6.for more songs:\n7.other options:\nSelect the song:");
+						int kf;
+						scanf("%d",&kf);
+						switch(kf)
+						{
+							case 1:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=cmMiyZaSELo");
+								goto kg;
+								break;
+							}
+							case 2:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=bXNhPOMgavI");
+								goto kg;
+								break;
+							}
+							case 3:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=6DCOjq0omBc");
+								goto kg;
+								break;
+							}
+							case 4:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=M51OYEo2yjc");
+								goto kg;
+								break;
+							}
+							case 5:
+							{
+								system("cls");
+								system("start chrome https://www.youtube.com/watch?v=OxO2mVfEYbs");
+								goto kg;
+								break;
+							}
+							case 6:
+							{
+								system("cls");
+								system("start chrome https://www.jiosaavn.com/artist/kk-songs/K,5uNVM,qpM_");
+								goto kg;
+								break;
+							}
+							case 7:
+							{
+								system("cls");
+								printf("\nEnter your choose:\n1.To go back:\n2.Exit:\n");
+								scanf("%d",&cho);
+								if(cho==1)
+								{
+									system("cls");
+									goto kg;
+								}
+								else
+								{
+									system("cls");
+									break;
+								}
+								break;
+							}
+							default:
+							{
+								printf("\n you have selected wrong option:\nplease select correct one:");
+								system("cls");
+								goto kg;
+								break;
+							}
+						}
+					break;
+					}										
+				}
+				if(ver!=0)
+				{
+					printf("Enter a valid password");
+					goto repass;
+				}
+				}
+				if(temp!=0)
+				{
+					printf("Account is not founded");
+				}
+				if(temp!=0)
+				{
+					printf("\n\t Invalid passowrd");
+				}
+				break;
+			}
+			break;
+		}
+		break;
+		system("cls");
+		case 3:
+			{
+				system("cls");
+				printf("\n\tAvilable accounts are:%d",count);
+				for(i=0;i<count;i++)
+					{
+						printf("\n");
+						printf("\n\tName :%s",d[i].name);
+						//printf("\n\tContact :%s",d[i].contact);
+						printf("\n\tEmail %s",d[i].email);
+						printf("\n\tPassword:%s",d[i].password);
+					}
+				sleep(5);
+				system("cls");
+				break;
+			}
+		case 4:
+			{
+				system("cls");
+				printf("\n\tYou have selected Password Updation:");
+				printf("\n\t Enter The Email :");
+				scanf("%s",d[i].fmail);
+				for(i=0;i<count;i++)
+				{
+					f=strcmp(d[i].email,d[i].fmail);
+					if(f==0)
+					{
+						up:
+						printf("\n\t Enter your New Password of 8 chars only :");
+						scanf("%s",d[i].newpassword);
+						newle=strlen(d[i].newpassword);
+						if(newle!=8)
+						{
+							printf("\n\t Re-Enter Your password again :");
+							goto up;
+						}
+						strcpy(d[i].password,d[i].newpassword);
+						printf("\n\t Password has been updated ");
+						printf("\n\t Your New Password is :%s",d[i].password);
+					}
+				}
+				break;
+			}
+			default:
+			{
+				system("cls");
+				printf("\n\tEnter a valid option");
+				sleep(5);
+				system("cls");
+				goto start;	
+			}
+		}
+	}
+}}
